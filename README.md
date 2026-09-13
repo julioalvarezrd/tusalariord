@@ -1,5 +1,5 @@
 # Tu Salario RD
 
-Calculadora salarial para República Dominicana.
+Calculadora de salario neto para República Dominicana.
 
-Proyecto estático/PWA publicado con GitHub Pages.
+Incluye estimaciones de AFP, SFS, ISR, propinas, comisiones y otros ingresos gravados.
