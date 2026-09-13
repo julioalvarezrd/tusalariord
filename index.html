@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tu Salario RD: calculadora de salario neto en República Dominicana con AFP, SFS, ISR, propinas y comisiones.">
+  <meta name="theme-color" content="#f6f8fb">
+  <title>Tu Salario RD · Calculadora de salario</title>
+  <link rel="icon" href="img/logo.svg">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Inicio Tu Salario RD">
+        <img src="img/logo.svg" alt="">
+        <span>Tu Salario<strong>RD</strong></span>
+      </a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">Oscuro</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="intro">
+      <span class="eyebrow">Calculadora de salario · República Dominicana</span>
+      <h1>Calcula lo que realmente recibes.</h1>
+      <p>Ingresa tus datos mensuales y obtén una estimación clara de AFP, SFS, ISR y salario neto.</p>
+    </section>
+
+    <section class="calculator-layout" id="calculadora">
+      <form id="payrollForm" class="surface form-card">
+        <div class="section-heading"><div><span class="step">01</span><h2>Ingresos mensuales</h2></div><span class="year-badge">2026</span></div>
+        <div class="field-grid">
+          <label class="field field-wide"><span>Salario base <small>RD$</small></span><input id="salary" inputmode="decimal" placeholder="45,000.00" autocomplete="off" required></label>
+          <label class="field"><span>Propinas <small>RD$</small></span><input id="tips" inputmode="decimal" placeholder="0.00" autocomplete="off"></label>
+          <label class="field"><span>Comisiones <small>RD$</small></span><input id="commissions" inputmode="decimal" placeholder="0.00" autocomplete="off"></label>
+          <label class="field field-wide"><span>Otros ingresos gravados <small>RD$</small></span><input id="otherIncome" inputmode="decimal" placeholder="0.00" autocomplete="off"></label>
+        </div>
+        <div class="form-actions"><button type="submit" class="primary-btn">Calcular salario</button><button type="reset" class="ghost-btn">Limpiar</button></div>
+        <p class="form-note">Las comisiones se consideran en la base cotizable de TSS. Propinas y otros ingresos gravados se toman en cuenta para ISR según corresponda.</p>
+      </form>
+
+      <section class="surface result-card" aria-live="polite">
+        <div class="section-heading"><div><span class="step">02</span><h2>Resultado</h2></div><span class="status-dot"><i></i> Estimación</span></div>
+        <div class="net-summary"><span>Salario neto estimado</span><strong id="net">RD$ 0.00</strong><small>Pago quincenal: <b id="fortnight">RD$ 0.00</b></small></div>
+        <div class="summary-grid"><div class="summary-box positive"><span>Ingresos</span><strong id="gross">RD$ 0.00</strong></div><div class="summary-box negative"><span>Deducciones</span><strong id="deductions">RD$ 0.00</strong></div></div>
+        <div class="breakdown-list">
+          <div class="breakdown-group"><h3>Ingresos</h3><p><span>Salario base</span><b id="rSalary">RD$ 0.00</b></p><p><span>Propinas</span><b id="rTips">RD$ 0.00</b></p><p><span>Comisiones</span><b id="rCommissions">RD$ 0.00</b></p><p><span>Otros ingresos</span><b id="rOther">RD$ 0.00</b></p></div>
+          <div class="breakdown-group"><h3>Deducciones</h3><p><span>AFP <small>2.87%</small></span><b id="afp">RD$ 0.00</b></p><p><span>SFS <small>3.04%</small></span><b id="sfs">RD$ 0.00</b></p><p><span>ISR</span><b id="isr">RD$ 0.00</b></p></div>
+        </div>
+        <details class="details-card"><summary>Ver detalle del cálculo</summary><div class="detail-lines"><p><span>Base cotizable TSS</span><b id="tssBase">RD$ 0.00</b></p><p><span>Base mensual estimada para ISR</span><b id="isrBase">RD$ 0.00</b></p></div></details>
+      </section>
+    </section>
+
+    <section class="info-strip" id="informacion">
+      <article><span>Actualizado</span><strong>Parámetros 2026</strong><p>Topes y porcentajes centralizados para facilitar futuras actualizaciones.</p></article>
+      <article><span>Privado</span><strong>Todo ocurre en tu navegador</strong><p>La información ingresada no se envía a un servidor.</p></article>
+      <article><span>Responsive</span><strong>Diseñado para móvil</strong><p>Interfaz pensada para funcionar igual de bien en teléfono, tablet y computadora.</p></article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="footer-brand" href="./">Tu Salario<strong>RD</strong></a><p>Calcula lo que realmente recibes.</p></div><div class="disclaimer"><strong>Aviso</strong><p>Los resultados son estimaciones de carácter informativo y no sustituyen asesoría contable, fiscal o laboral profesional.</p></div><div class="footer-meta"><span>© 2026 Tu Salario RD</span><a href="https://julioalvarezrd.github.io/">Made with ❤️ by Julio Alvarez</a></div></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
