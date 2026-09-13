@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Tu Salario RD</title>
+  <desc id="desc">Logotipo de Tu Salario RD con calculadora y símbolo monetario.</desc>
+  <rect width="720" height="180" rx="28" fill="#0F2D5B"/>
+  <g fill="#FFFFFF">
+    <rect x="42" y="28" width="118" height="118" rx="18"/>
+    <rect x="66" y="46" width="70" height="10" rx="5" fill="#0F2D5B"/>
+    <rect x="66" y="64" width="70" height="10" rx="5" fill="#0F2D5B"/>
+    <g fill="#0F2D5B">
+      <rect x="70" y="87" width="16" height="16" rx="4"/>
+      <rect x="92" y="87" width="16" height="16" rx="4"/>
+      <rect x="114" y="87" width="16" height="16" rx="4"/>
+      <rect x="70" y="109" width="16" height="16" rx="4"/>
+      <rect x="92" y="109" width="16" height="16" rx="4"/>
+      <rect x="114" y="109" width="16" height="16" rx="4"/>
+    </g>
+    <path d="M12 120c18-52 56-88 116-102 6-1 8 8 2 10-36 11-59 27-80 55-12 16-20 32-28 50-2 6-12 4-10-3Z" opacity=".78"/>
+    <path d="M24 144c30-54 68-74 145-80 7 0 8 9 1 10-63 10-97 31-133 78-4 5-13-2-13-8Z"/>
+    <circle cx="152" cy="111" r="25"/>
+    <circle cx="152" cy="111" r="20" fill="#FFFFFF"/>
+    <text x="152" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#0F2D5B">RD$</text>
+    <text x="222" y="74" font-family="Arial, sans-serif" font-size="58" font-weight="800">Tu</text>
+    <text x="222" y="126" font-family="Arial, sans-serif" font-size="64" font-weight="900">SalarioRD</text>
+  </g>
+</svg>
