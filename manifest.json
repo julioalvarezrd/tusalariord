@@ -1,16 +1,31 @@
 {
   "name": "Tu Salario RD",
-  "short_name": "TuSalarioRD",
+  "short_name": "Tu Salario RD",
   "description": "Calculadora de salario neto para República Dominicana con AFP, SFS, ISR, propinas y comisiones.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#0b84f3",
+  "theme_color": "#0f2d5b",
   "icons": [
     {
-      "src": "img/logo.svg",
+      "src": "img/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
