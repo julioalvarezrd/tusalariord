@@ -1,5 +1,5 @@
-const CACHE='tusalariord-v3';
-const ASSETS=['./','./index.html','./styles.css','./app.js','./enhancements.js','./compat.js','./manifest.json','./img/logo.png','./img/favicon.ico','./img/ferrocarril-la-romana.png','./img/icons/icon-16.png','./img/icons/icon-32.png','./img/icons/icon-64.png','./img/icons/icon-192.png','./img/icons/icon-512.png','./img/icons/icon-maskable-512.png','./img/icons/apple-touch-icon.png'];
+const CACHE='tusalariord-v4';
+const ASSETS=['./','./index.html','./styles.css','./install-prompt.css','./app.js','./enhancements.js','./compat.js','./install-prompt.js','./manifest.json','./img/logo.png','./img/favicon.ico','./img/ferrocarril-la-romana.png','./img/icons/icon-16.png','./img/icons/icon-32.png','./img/icons/icon-64.png','./img/icons/icon-192.png','./img/icons/icon-512.png','./img/icons/icon-maskable-512.png','./img/icons/apple-touch-icon.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;event.respondWith(fetch(event.request).then(response=>{const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));return response}).catch(()=>caches.match(event.request)))});
