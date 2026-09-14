@@ -24,6 +24,42 @@
   syncResultVisibility();
   mobileQuery.addEventListener?.('change',syncResultVisibility);
 
+  const seoSection=document.getElementById('como-funciona');
+  if(seoSection&&!document.getElementById('seoMobileToggle')){
+    const body=document.createElement('div');
+    body.id='seoMobileContent';
+    body.className='seo-collapsible-body';
+    while(seoSection.firstChild) body.appendChild(seoSection.firstChild);
+
+    const toggle=document.createElement('button');
+    toggle.id='seoMobileToggle';
+    toggle.className='seo-mobile-toggle';
+    toggle.type='button';
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-controls',body.id);
+    toggle.innerHTML='<span><small>Entiende tu nómina</small><strong>Cómo se calcula tu salario</strong></span><i aria-hidden="true">⌄</i>';
+
+    seoSection.append(toggle,body);
+
+    const syncSeoState=()=>{
+      if(mobileQuery.matches){
+        const expanded=toggle.getAttribute('aria-expanded')==='true';
+        seoSection.classList.toggle('seo-collapsed',!expanded);
+      }else{
+        seoSection.classList.remove('seo-collapsed');
+      }
+    };
+
+    toggle.addEventListener('click',()=>{
+      const expanded=toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded',String(!expanded));
+      seoSection.classList.toggle('seo-collapsed',expanded);
+    });
+
+    syncSeoState();
+    mobileQuery.addEventListener?.('change',syncSeoState);
+  }
+
   document.addEventListener('DOMContentLoaded',()=>{
     const form=document.getElementById('payrollForm');
     const salary=document.getElementById('salary');
