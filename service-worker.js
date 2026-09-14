@@ -1,4 +1,4 @@
-const CACHE='tusalariord-v5';
+const CACHE='tusalariord-v6';
 const ASSETS=['./','./index.html','./styles.css','./brand.css','./install-prompt.css','./app.js','./enhancements.js','./compat.js','./install-prompt.js','./manifest.json','./img/logo.png','./img/logo-footer.svg','./img/favicon.ico','./img/ferrocarril-la-romana.png','./img/icons/icon-16.png','./img/icons/icon-32.png','./img/icons/icon-64.png','./img/icons/icon-192.png','./img/icons/icon-512.png','./img/icons/icon-maskable-512.png','./img/icons/apple-touch-icon.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
