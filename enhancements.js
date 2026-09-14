@@ -28,10 +28,20 @@
     });
   }
 
+  function syncIsrRow(values={}){
+    const row=$('isr')?.closest('.deduction-item');
+    if(!row)return;
+    const hide=Number(values.isr||0)<=0;
+    row.classList.toggle('zero-deduction-hidden',hide);
+    row.hidden=hide;
+    row.setAttribute('aria-hidden',hide?'true':'false');
+  }
+
   function render(values){
     moneyIds.forEach(id=>{if($(id)&&id!=='fortnight')$(id).textContent=format(values[id]||0)});
     if($('fortnight'))$('fortnight').textContent=format((values.net||0)/2);
     syncOptionalIncomeRows(values);
+    syncIsrRow(values);
     const gross=values.gross||0,net=values.net||0,deductions=values.deductions||0;
     const netPct=gross>0?Math.max(0,Math.min(100,net/gross*100)):0,dedPct=gross>0?Math.max(0,Math.min(100,deductions/gross*100)):0;
     if($('netBar'))$('netBar').style.width=`${netPct}%`;
@@ -66,7 +76,8 @@
   window.calculate=function(){return selectedMode==='net-to-gross'?runNetToGross():runGrossToNet()};
   document.addEventListener('DOMContentLoaded',()=>{
     document.querySelectorAll('input[name="mode"]').forEach(input=>input.addEventListener('change',e=>{selectedMode=e.target.value;setLabels()}));
-    const form=$('payrollForm');if(form)form.addEventListener('reset',()=>syncOptionalIncomeRows());
-    syncOptionalIncomeRows();setLabels();
+    const form=$('payrollForm');
+    if(form)form.addEventListener('reset',()=>{syncOptionalIncomeRows();syncIsrRow()});
+    syncOptionalIncomeRows();syncIsrRow();setLabels();
   });
 })();
