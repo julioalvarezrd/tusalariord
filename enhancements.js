@@ -24,9 +24,13 @@
 
   function syncOptionalIncomeRows(values={}){
     optionalIncomeRows.forEach(id=>{
-      const value=values[id]||0;
+      const value=Number(values[id]||0);
       const row=$(id)?.closest('p');
-      if(row) row.hidden=value<=0;
+      if(!row)return;
+      const shouldHide=value<=0;
+      row.classList.toggle('optional-income-hidden',shouldHide);
+      row.hidden=shouldHide;
+      row.setAttribute('aria-hidden',shouldHide?'true':'false');
     });
   }
 
