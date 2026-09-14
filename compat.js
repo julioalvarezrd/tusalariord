@@ -24,6 +24,42 @@
   syncResultVisibility();
   mobileQuery.addEventListener?.('change',syncResultVisibility);
 
+  const extraIncome=document.getElementById('extraIncomeFields');
+  if(extraIncome&&!document.getElementById('extraIncomeToggle')){
+    const body=document.createElement('div');
+    body.id='extraIncomeContent';
+    body.className='extra-income-collapsible-body';
+    while(extraIncome.firstChild) body.appendChild(extraIncome.firstChild);
+
+    const toggle=document.createElement('button');
+    toggle.id='extraIncomeToggle';
+    toggle.className='extra-income-toggle';
+    toggle.type='button';
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-controls',body.id);
+    toggle.innerHTML='<span><strong>Otros ingresos mensuales</strong><small>Comisiones, propinas y otros ingresos</small></span><i aria-hidden="true">⌄</i>';
+
+    extraIncome.append(toggle,body);
+
+    const syncExtraIncomeState=()=>{
+      if(mobileQuery.matches){
+        const expanded=toggle.getAttribute('aria-expanded')==='true';
+        extraIncome.classList.toggle('extra-income-collapsed',!expanded);
+      }else{
+        extraIncome.classList.remove('extra-income-collapsed');
+      }
+    };
+
+    toggle.addEventListener('click',()=>{
+      const expanded=toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded',String(!expanded));
+      extraIncome.classList.toggle('extra-income-collapsed',expanded);
+    });
+
+    syncExtraIncomeState();
+    mobileQuery.addEventListener?.('change',syncExtraIncomeState);
+  }
+
   const seoSection=document.getElementById('como-funciona');
   if(seoSection&&!document.getElementById('seoMobileToggle')){
     const body=document.createElement('div');
