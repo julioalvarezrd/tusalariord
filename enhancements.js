@@ -4,6 +4,7 @@
   const format=n=>n.toLocaleString('es-DO',{style:'currency',currency:'DOP'});
   const originalCalculate=window.calculate;
   const moneyIds=['net','gross','rSalary','rTips','rCommissions','rOther','afp','sfs','isr','deductions','tssBase','isrBase','fortnight'];
+  const optionalIncomeRows=['rCommissions','rTips','rOther'];
   let selectedPeriod='month';
   let selectedMode='gross-to-net';
 
@@ -21,10 +22,19 @@
     return Object.fromEntries(moneyIds.map(id=>[id,parseMoney($(id)?.textContent)]));
   }
 
+  function syncOptionalIncomeRows(values={}){
+    optionalIncomeRows.forEach(id=>{
+      const value=values[id]||0;
+      const row=$(id)?.closest('p');
+      if(row) row.hidden=value<=0;
+    });
+  }
+
   function renderPeriod(values){
     const divisor=selectedPeriod==='fortnight'?2:1;
     moneyIds.forEach(id=>{if($(id)&&id!=='fortnight')$(id).textContent=format((values[id]||0)/divisor)});
     if($('fortnight')) $('fortnight').textContent=format((values.net||0)/2);
+    syncOptionalIncomeRows(values);
     const gross=(values.gross||0)/divisor,net=(values.net||0)/divisor,deductions=(values.deductions||0)/divisor;
     const netPct=gross>0?Math.max(0,Math.min(100,net/gross*100)):0;
     const dedPct=gross>0?Math.max(0,Math.min(100,deductions/gross*100)):0;
@@ -72,6 +82,9 @@
   document.addEventListener('DOMContentLoaded',()=>{
     document.querySelectorAll('input[name="period"]').forEach(input=>input.addEventListener('change',e=>{selectedPeriod=e.target.value;setPeriodLabels()}));
     document.querySelectorAll('input[name="mode"]').forEach(input=>input.addEventListener('change',e=>{selectedMode=e.target.value;setPeriodLabels()}));
+    const form=$('payrollForm');
+    if(form) form.addEventListener('reset',()=>syncOptionalIncomeRows());
+    syncOptionalIncomeRows();
     setPeriodLabels();
   });
 })();
