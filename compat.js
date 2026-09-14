@@ -14,7 +14,15 @@
   }
 
   const resultCard=document.querySelector('.result-card');
-  if(resultCard) resultCard.hidden=true;
+  const mobileQuery=window.matchMedia('(max-width: 900px)');
+
+  function syncResultVisibility(){
+    if(!resultCard)return;
+    resultCard.hidden=mobileQuery.matches;
+  }
+
+  syncResultVisibility();
+  mobileQuery.addEventListener?.('change',syncResultVisibility);
 
   document.addEventListener('DOMContentLoaded',()=>{
     const form=document.getElementById('payrollForm');
@@ -25,9 +33,8 @@
       const amount=Number(String(salary?.value||'').replace(/,/g,''))||0;
       if(amount<=0)return;
 
-      resultCard.hidden=false;
-
-      if(window.matchMedia('(max-width: 900px)').matches){
+      if(mobileQuery.matches){
+        resultCard.hidden=false;
         requestAnimationFrame(()=>{
           resultCard.scrollIntoView({behavior:'smooth',block:'start'});
         });
@@ -35,7 +42,7 @@
     });
 
     form.addEventListener('reset',()=>{
-      resultCard.hidden=true;
+      resultCard.hidden=mobileQuery.matches;
     });
   });
 })();
