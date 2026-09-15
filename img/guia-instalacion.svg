@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Guía visual para instalar Tu Salario RD</title>
+  <desc id="desc">Dos teléfonos muestran los pasos principales para instalar Tu Salario RD en iPhone o iPad desde Safari y en Android desde Chrome.</desc>
+  <rect width="1200" height="720" rx="36" fill="#F4F6FA"/>
+  <text x="600" y="68" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" fill="#0F2D5B">Instala Tu Salario RD en tu pantalla de inicio</text>
+  <text x="600" y="104" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="17" fill="#5B6474">No necesitas descargar nada desde una tienda de aplicaciones.</text>
+
+  <g transform="translate(105 142)">
+    <rect width="455" height="500" rx="28" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="3"/>
+    <text x="32" y="50" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#0F2D5B">iPhone / iPad · Safari</text>
+    <rect x="48" y="82" width="188" height="356" rx="30" fill="#0F2D5B"/>
+    <rect x="60" y="102" width="164" height="316" rx="20" fill="#FFFFFF"/>
+    <rect x="76" y="122" width="132" height="44" rx="10" fill="#E8EEF6"/>
+    <circle cx="91" cy="144" r="8" fill="#E11D2E"/>
+    <text x="106" y="149" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="800" fill="#0F2D5B">Tu Salario RD</text>
+    <rect x="76" y="180" width="132" height="122" rx="12" fill="#F4F6FA" stroke="#D9E2EC"/>
+    <path d="M142 260v-44m0 0-16 16m16-16 16 16" fill="none" stroke="#E11D2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="76" y="318" width="132" height="72" rx="12" fill="#E8EEF6"/>
+    <text x="142" y="345" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#374151">Añadir a pantalla</text>
+    <text x="142" y="360" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#374151">de inicio</text>
+    <circle cx="282" cy="132" r="18" fill="#E11D2E"/>
+    <text x="282" y="139" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="312" y="138" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Toca Compartir</text>
+    <circle cx="282" cy="205" r="18" fill="#E11D2E"/>
+    <text x="282" y="212" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="312" y="199" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Elige “Añadir a</text>
+    <text x="312" y="220" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">pantalla de inicio”</text>
+    <circle cx="282" cy="286" r="18" fill="#E11D2E"/>
+    <text x="282" y="293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="312" y="292" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Confirma “Añadir”</text>
+    <rect x="268" y="335" width="150" height="54" rx="13" fill="#0F2D5B"/>
+    <text x="343" y="368" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Lista para usar</text>
+  </g>
+
+  <g transform="translate(640 142)">
+    <rect width="455" height="500" rx="28" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="3"/>
+    <text x="32" y="50" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#0F2D5B">Android · Chrome</text>
+    <rect x="48" y="82" width="188" height="356" rx="30" fill="#0F2D5B"/>
+    <rect x="60" y="102" width="164" height="316" rx="20" fill="#FFFFFF"/>
+    <rect x="76" y="122" width="132" height="44" rx="10" fill="#E8EEF6"/>
+    <circle cx="91" cy="144" r="8" fill="#E11D2E"/>
+    <text x="106" y="149" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="800" fill="#0F2D5B">Tu Salario RD</text>
+    <circle cx="198" cy="144" r="3" fill="#374151"/><circle cx="198" cy="134" r="3" fill="#374151"/><circle cx="198" cy="154" r="3" fill="#374151"/>
+    <rect x="76" y="180" width="132" height="170" rx="12" fill="#F4F6FA" stroke="#D9E2EC"/>
+    <rect x="88" y="198" width="108" height="34" rx="8" fill="#FFFFFF" stroke="#D9E2EC"/>
+    <text x="142" y="220" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#374151">Instalar aplicación</text>
+    <rect x="88" y="244" width="108" height="34" rx="8" fill="#FFFFFF" stroke="#D9E2EC"/>
+    <text x="142" y="266" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#374151">Añadir a pantalla</text>
+    <rect x="88" y="292" width="108" height="42" rx="8" fill="#0F2D5B"/>
+    <text x="142" y="318" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="800" fill="#FFFFFF">Instalar</text>
+    <circle cx="282" cy="132" r="18" fill="#E11D2E"/>
+    <text x="282" y="139" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="312" y="138" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Abre el menú ⋮</text>
+    <circle cx="282" cy="205" r="18" fill="#E11D2E"/>
+    <text x="282" y="212" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="312" y="199" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Toca “Instalar app”</text>
+    <text x="312" y="220" font-family="Inter,Arial,sans-serif" font-size="13" fill="#5B6474">o “Añadir a pantalla”</text>
+    <circle cx="282" cy="286" r="18" fill="#E11D2E"/>
+    <text x="282" y="293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="312" y="292" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Confirma “Instalar”</text>
+    <rect x="268" y="335" width="150" height="54" rx="13" fill="#0F2D5B"/>
+    <text x="343" y="368" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Acceso directo</text>
+  </g>
+
+  <text x="600" y="684" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" fill="#5B6474">Los nombres de las opciones pueden variar ligeramente según la versión del navegador.</text>
+</svg>
